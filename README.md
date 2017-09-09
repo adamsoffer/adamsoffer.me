@@ -1,7 +1,7 @@
-# Adam Soffer's Resume
+# Adam Soffer
 
 ## URL
-https://adamsoffer.now.sh/resume
+https://adamsoffer.me
 
 ## How to use
 Install it and run
