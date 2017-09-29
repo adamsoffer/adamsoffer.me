@@ -26,15 +26,17 @@ export const Bar = glamorous.div({
   width: '2px'
 })
 
-export const Body = glamorous.div({
-  fontSize: '14px',
-  lineHeight: '28px',
-  marginBottom: '50px',
-  marginLeft: '30px'
-},
-(props) => ({
-  marginBottom: props.lastChild ? '0' : '50px'
-}))
+export const Body = glamorous.div(
+  {
+    fontSize: '14px',
+    lineHeight: '28px',
+    marginBottom: '50px',
+    marginLeft: '30px'
+  },
+  props => ({
+    marginBottom: props.lastChild ? '0' : '50px'
+  })
+)
 
 export const Title = glamorous.div({
   fontSize: '16px',

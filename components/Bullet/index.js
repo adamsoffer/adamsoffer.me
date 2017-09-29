@@ -1,6 +1,14 @@
 import { Container, Line, Circle, Bar, Body, Title, Subtitle } from './styles'
 
-function Bullet ({ title, subtitle, description, startDate, endDate, firstChild, lastChild }) {
+function Bullet({
+  title,
+  subtitle,
+  description,
+  startDate,
+  endDate,
+  firstChild,
+  lastChild
+}) {
   if (!endDate) {
     endDate = 'Present'
   }
@@ -12,7 +20,9 @@ function Bullet ({ title, subtitle, description, startDate, endDate, firstChild,
       </Line>
       <Body lastChild={lastChild}>
         <Title>{title}</Title>
-        <Subtitle>{subtitle} | {startDate} - {endDate}</Subtitle>
+        <Subtitle>
+          {subtitle} | {startDate} - {endDate}
+        </Subtitle>
         {description}
       </Body>
     </Container>

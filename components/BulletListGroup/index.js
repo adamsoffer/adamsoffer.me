@@ -4,7 +4,7 @@ import { Container, Wrapper, Heading } from './styles'
 import BulletList from '../BulletList'
 import Bullet from '../Bullet'
 
-function BulletListGroup ({ data: { experiences, educations } }) {
+function BulletListGroup({ data: { experiences, educations } }) {
   return (
     <Container>
       <Wrapper>
@@ -37,7 +37,7 @@ function BulletListGroup ({ data: { experiences, educations } }) {
                 startDate={moment(education.startDate).format(`MMM 'YY`)}
                 endDate={getEndDate(education.endDate)}
                 firstChild={i === 0}
-                lastChild={(educations.length - 1) === i}
+                lastChild={educations.length - 1 === i}
               />
             )
           })}
@@ -57,7 +57,6 @@ const allBullets = gql`
       startDate
       endDate
     }
-
     educations: allEducations(orderBy: startDate_DESC) {
       id
       schoolName
@@ -70,7 +69,7 @@ const allBullets = gql`
   }
 `
 
-function getEndDate (endDate) {
+function getEndDate(endDate) {
   if (!endDate) {
     return 'Present'
   } else {

@@ -9,7 +9,7 @@ css.global('body', {
   backgroundColor: '#fff'
 })
 
-export default withData((props) => (
+export default withData(props => (
   <Main>
     <Masthead />
     <BulletListGroup />

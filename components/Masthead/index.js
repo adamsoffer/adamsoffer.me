@@ -1,19 +1,34 @@
 import { gql, graphql } from 'react-apollo'
 import Header from '../Header'
-import { Container, Wrapper, Content, Info, Heading, Subheading, Contact, A, SocialIcons, IconLink, Image } from './styles'
+import {
+  Container,
+  Wrapper,
+  Content,
+  Info,
+  Heading,
+  Subheading,
+  Contact,
+  A,
+  SocialIcons,
+  IconLink,
+  Image
+} from './styles'
 
-function Masthead ({ data: { User: {
-    fullName,
-    jobTitle,
-    address,
-    city,
-    state,
-    zip,
-    phone,
-    email,
-    summary
+function Masthead({
+  data: {
+    User: {
+      fullName,
+      jobTitle,
+      address,
+      city,
+      state,
+      zip,
+      phone,
+      email,
+      summary
+    }
   }
-}}) {
+}) {
   return (
     <Container>
       <Wrapper>
@@ -22,21 +37,23 @@ function Masthead ({ data: { User: {
             <Heading>{fullName}</Heading>
             <Subheading>{jobTitle}</Subheading>
             <SocialIcons>
-              <IconLink href='https://github.com/ads1018' target='_blank'>
-                <Image src='/static/github.svg' />
+              <IconLink href="https://github.com/ads1018" target="_blank">
+                <Image src="/static/github.svg" />
               </IconLink>
-              <IconLink href='https://medium.com/@adamsoffer' target='_blank'>
-                <Image src='/static/medium.svg' />
+              <IconLink href="https://medium.com/@adamsoffer" target="_blank">
+                <Image src="/static/medium.svg" />
               </IconLink>
-              <IconLink href='https://twitter.com/adamsoffer' target='_blank'>
-                <Image src='/static/twitter.svg' />
+              <IconLink href="https://twitter.com/adamsoffer" target="_blank">
+                <Image src="/static/twitter.svg" />
               </IconLink>
             </SocialIcons>
           </Info>
           <Contact>
-            {address}<br />
-            {city}, {state} {zip}<br />
-            <A href='mailto:{email}'>{email}</A>
+            {address}
+            <br />
+            {city}, {state} {zip}
+            <br />
+            <A href="mailto:{email}">{email}</A>
           </Contact>
         </Content>
       </Wrapper>
