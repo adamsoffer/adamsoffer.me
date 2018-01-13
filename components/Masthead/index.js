@@ -1,5 +1,7 @@
-import { gql, graphql } from 'react-apollo'
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 import Header from '../Header'
+import ErrorMessage from '../ErrorMessage'
 import {
   Container,
   Wrapper,
@@ -16,6 +18,7 @@ import {
 
 function Masthead({
   data: {
+    error,
     User: {
       fullName,
       jobTitle,
@@ -29,6 +32,7 @@ function Masthead({
     }
   }
 }) {
+  if (error) return <ErrorMessage message="Error loading posts." />
   return (
     <Container>
       <Wrapper>
@@ -53,7 +57,7 @@ function Masthead({
             <br />
             {city}, {state} {zip}
             <br />
-            <A href="mailto:{email}">{email}</A>
+            <A href={`mailto:${email}`}>{email}</A>
           </Contact>
         </Content>
       </Wrapper>

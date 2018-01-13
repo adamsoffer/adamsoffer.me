@@ -1,10 +1,13 @@
-import { gql, graphql } from 'react-apollo'
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 import moment from 'moment'
 import { Container, Wrapper, Heading } from './styles'
+import ErrorMessage from '../ErrorMessage'
 import BulletList from '../BulletList'
 import Bullet from '../Bullet'
 
-function BulletListGroup({ data: { experiences, educations } }) {
+function BulletListGroup({ data: { error, experiences, educations } }) {
+  if (error) return <ErrorMessage message="Error loading posts." />
   return (
     <Container>
       <Wrapper>
