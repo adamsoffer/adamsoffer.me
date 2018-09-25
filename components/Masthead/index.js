@@ -53,10 +53,6 @@ function Masthead({
             </SocialIcons>
           </Info>
           <Contact>
-            {address}
-            <br />
-            {city}, {state} {zip}
-            <br />
             <A href={`mailto:${email}`}>{email}</A>
           </Contact>
         </Content>
