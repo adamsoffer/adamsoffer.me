@@ -2,13 +2,21 @@ import glamorous from 'glamorous'
 import { container } from '../../lib/mixins'
 import { screens } from '../../lib/constants'
 
-export const Container = glamorous.div({
-  ...container,
-  borderBottom: '1px dashed #d0d0d0',
-  paddingBottom: '45px',
-  paddingTop: '45px',
-  marginBottom: '45px'
-})
+export const Container = glamorous.div(
+  {
+    ...container,
+    borderBottom: '1px dashed #d0d0d0',
+    paddingBottom: '45px',
+    paddingTop: '45px',
+    marginBottom: '45px'
+  },
+  props => (
+    console.log('watt', props),
+    {
+      borderBottom: props.removeBorderBottom ? 0 : '1px dashed #d0d0d0'
+    }
+  )
+)
 
 export const Wrapper = glamorous.div({
   display: 'flex',

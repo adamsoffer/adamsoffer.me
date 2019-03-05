@@ -9,12 +9,12 @@ import {
   Tag
 } from './styles'
 
-function Header({ summary }) {
+function Header({ removeBorderBottom, summary }) {
   return (
-    <Container>
+    <Container removeBorderBottom={removeBorderBottom}>
       <Wrapper>
         <Summary>
-          <Heading>Summary</Heading>
+          {/* <Heading>Summary</Heading> */}
           <Body>{summary}</Body>
         </Summary>
         <Skills>

@@ -6,7 +6,10 @@ import ErrorMessage from '../ErrorMessage'
 import BulletList from '../BulletList'
 import Bullet from '../Bullet'
 
-function BulletListGroup({ data: { error, experiences, educations } }) {
+function BulletListGroup({
+  borderBottom,
+  data: { error, experiences, educations }
+}) {
   if (error) return <ErrorMessage message="Error loading posts." />
   return (
     <Container>

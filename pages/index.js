@@ -10,7 +10,7 @@ css.global('body', {
 
 export default withData(props => (
   <Main>
-    <Masthead />
-    <Footer />
+    <Masthead removeBorderBottom={true} />
+    {/* <Footer /> */}
   </Main>
 ))

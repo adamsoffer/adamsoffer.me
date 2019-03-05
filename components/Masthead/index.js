@@ -17,6 +17,7 @@ import {
 } from './styles'
 
 function Masthead({
+  removeBorderBottom,
   data: {
     error,
     User: {
@@ -61,7 +62,7 @@ function Masthead({
           </Contact>
         </Content>
       </Wrapper>
-      <Header summary={summary} />
+      <Header removeBorderBottom={removeBorderBottom} summary={summary} />
     </Container>
   )
 }
