@@ -41,7 +41,7 @@ function Masthead({
             <Heading>{fullName}</Heading>
             <Subheading>{jobTitle}</Subheading>
             <SocialIcons>
-              <IconLink href="https://github.com/ads1018" target="_blank">
+              <IconLink href="https://github.com/adamsoffer" target="_blank">
                 <Image src="/static/github.svg" />
               </IconLink>
               <IconLink href="https://medium.com/@adamsoffer" target="_blank">

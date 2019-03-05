@@ -22,7 +22,6 @@ function Header({ summary }) {
           <TagList>
             <Tag>React</Tag>
             <Tag>Javascript</Tag>
-            <Tag>Solidity</Tag>
             <Tag>Ethereum</Tag>
             <Tag>GraphQL</Tag>
             <Tag>UX/UI Design</Tag>
