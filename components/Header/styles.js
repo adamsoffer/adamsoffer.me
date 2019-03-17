@@ -7,15 +7,12 @@ export const Container = glamorous.div(
     ...container,
     borderBottom: '1px dashed #d0d0d0',
     paddingBottom: '45px',
-    paddingTop: '45px',
-    marginBottom: '45px'
+    paddingTop: '56px'
+    // marginBottom: '45px'
   },
-  props => (
-    console.log('watt', props),
-    {
-      borderBottom: props.removeBorderBottom ? 0 : '1px dashed #d0d0d0'
-    }
-  )
+  props => ({
+    borderBottom: props.removeBorderBottom ? 0 : '1px dashed #d0d0d0'
+  })
 )
 
 export const Wrapper = glamorous.div({
@@ -34,8 +31,8 @@ export const Heading = glamorous.div({
 })
 
 export const Body = glamorous.div({
-  fontSize: '14px',
-  lineHeight: '28px'
+  fontSize: '16px',
+  lineHeight: '34px'
 })
 
 export const Summary = glamorous.div({
@@ -43,8 +40,8 @@ export const Summary = glamorous.div({
   marginBottom: '50px',
   [`@media (min-width: ${screens.medium})`]: {
     flex: '65%',
-    marginBottom: 0,
-    marginRight: '100px'
+    marginBottom: 0
+    // marginRight: '100px'
   }
 })
 

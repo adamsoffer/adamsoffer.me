@@ -17,7 +17,7 @@ function Header({ removeBorderBottom, summary }) {
           {/* <Heading>Summary</Heading> */}
           <Body>{summary}</Body>
         </Summary>
-        <Skills>
+        {/* <Skills>
           <Heading>Interests</Heading>
           <TagList>
             <Tag>React</Tag>
@@ -28,7 +28,7 @@ function Header({ removeBorderBottom, summary }) {
             <Tag>Futurism</Tag>
             <Tag>The Arts</Tag>
           </TagList>
-        </Skills>
+        </Skills> */}
       </Wrapper>
     </Container>
   )

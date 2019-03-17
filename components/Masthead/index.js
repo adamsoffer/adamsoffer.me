@@ -40,26 +40,18 @@ function Masthead({
         <Content>
           <Info>
             <Heading>{fullName}</Heading>
-            <Subheading>{jobTitle}</Subheading>
-            <SocialIcons>
-              <IconLink href="https://github.com/adamsoffer" target="_blank">
-                <Image src="/static/github.svg" />
-              </IconLink>
-              <IconLink href="https://medium.com/@adamsoffer" target="_blank">
-                <Image src="/static/medium.svg" />
-              </IconLink>
-              <IconLink href="https://twitter.com/adamsoffer" target="_blank">
-                <Image src="/static/twitter.svg" />
-              </IconLink>
-            </SocialIcons>
           </Info>
-          <Contact>
-            {address}
-            <br />
-            {city}, {state} {zip}
-            <br />
-            <A href={`mailto:${email}`}>{email}</A>
-          </Contact>
+          <SocialIcons>
+            <IconLink href="https://github.com/adamsoffer" target="_blank">
+              <Image src="/static/github.svg" />
+            </IconLink>
+            <IconLink href="https://medium.com/@adamsoffer" target="_blank">
+              <Image src="/static/medium.svg" />
+            </IconLink>
+            <IconLink href="https://twitter.com/adamsoffer" target="_blank">
+              <Image src="/static/twitter.svg" />
+            </IconLink>
+          </SocialIcons>
         </Content>
       </Wrapper>
       <Header removeBorderBottom={removeBorderBottom} summary={summary} />

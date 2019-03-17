@@ -9,14 +9,15 @@ export const Container = glamorous.div({
 
 export const Wrapper = glamorous.div({
   ...container,
-  borderBottom: '1px dashed #d0d0d0',
-  paddingBottom: '30px',
-  paddingTop: '30px'
+  // borderBottom: '1px dashed #d0d0d0',
+  paddingBottom: '40px',
+  paddingTop: '40px'
 })
 
 export const Content = glamorous.div({
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'center',
   [`@media (min-width: ${screens.small})`]: {
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -33,8 +34,8 @@ export const Info = glamorous.div({
 
 export const Heading = glamorous.h1({
   fontSize: '22px',
-  fontWeight: 900,
-  marginBottom: '10px'
+  fontWeight: 900
+  // marginBottom: '10px'
 })
 
 export const Subheading = glamorous.h2({
@@ -57,8 +58,7 @@ export const A = glamorous.a({
 
 export const SocialIcons = glamorous.div({
   alignItems: 'center',
-  display: 'flex',
-  marginTop: '12px'
+  display: 'flex'
 })
 
 export const IconLink = glamorous.a({
